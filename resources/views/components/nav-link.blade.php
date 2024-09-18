@@ -7,7 +7,7 @@ $classes = ($active ?? false)
 @endphp
 
 <li class="nav-item">
-    <a {{ $attributes->merge(['class' => $classes]) }} href="{{ $attributes->get('href') }}">
+    <a wire:navigate.hover {{ $attributes->merge(['class' => $classes]) }} href="{{ $attributes->get('href') }}">
         {{ $slot }}
     </a>
 </li>
